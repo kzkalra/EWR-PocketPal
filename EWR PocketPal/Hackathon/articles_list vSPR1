@@ -1,0 +1,71 @@
+<!--articles wala page
+modifications:
+need to add imagepath to json file
+
+-->
+
+<html>
+    <head>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>
+    </title>
+    </head>
+    <body onload="loadArticleHeaders('panchayat') ">
+    <script language="javascript" type="text/javascript">
+    <!--
+    //fieldName= description , fieldvalue = text file
+
+     
+
+     function loadArticleHeaders(category) {
+      
+         $.getJSON('localhost://articleload.php?topic='+category, function(data) {
+            var i = 0;
+                              $.each(data, function(record, recordVal) {
+                                  var articleTitle = recordVal.title;
+                                  var articlePath = recordVal.filePath;
+                                  var articleImage = recordVal.imagePath;
+                                  i++;
+                                  var idOfElement = "article" + i;
+                                  $('<div/>', {
+                                      'id':idOfElement,
+                                      'class':'myClass',
+                                      'text':articleTitle,
+                                  }).on('click',loadArticleFile(articlePath, articleImage))
+                                  .appendTo('body');
+      });//end of .each
+    });//end of getJSON 
+  function loadArticleFile(fileData, fileImage)
+    {               
+      var xhttp1 = new XMLHTTPRequest();//check syntax  --FOR ARTICLE LOADING...
+      xhttp.onreadystatechange = function() {
+                                            if (this.readyState == 4 && this.status == 200) 
+                                            {
+                                              xhttp1.open("GET", fileData, true);
+                                              xhttp1.send();
+                                              //do the toggle thing with html. Use this.responseText to access the content.
+                                            }
+              
+                                            }
+
+
+
+      var xhttp2 = new XMLHTTPRequest();//check syntax  --FOR IMAGE LOADING...
+      xhttp.onreadystatechange = function() {
+                                            if (this.readyState == 4 && this.status == 200) 
+                                            {
+                                              xhttp2.open("GET", fileImage, true);
+                                              xhttp2.send();
+                                              //do the toggle thing with html. Use this.responseText to access the content.
+                                            }
+              
+                                            }
+
+
+     }
+    //-->
+    </script>
+    <p id="articleText">Loading...</p>
+    </body>
+</html>

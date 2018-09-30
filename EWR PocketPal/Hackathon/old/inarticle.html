@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+height: auto;
+width: 100%;
+}
+
+.container {
+  position: relative;
+  max-width: 650px;
+  margin: 0px auto;
+  margin-top: 100px;
+  margin-left: auto;
+}
+
+.comment {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.commenter {
+  float: left;
+}
+
+.commenter img {
+  width: 200px;
+  height: 200px;
+}
+
+.comment-text-area {
+  float: right;
+  width: calc(100% - 45px);
+  height: auto;
+  background-color: black;
+}
+
+.textinput {
+  float:left;
+  width: 100%;
+  min-height: 100px;
+  outline: none;
+  resize: none;
+  
+}
+</style>
+</head>
+<body bgcolor="pink">
+
+
+ <h1 style="font-family:cursive;font-size:50px;color: black;margin-left: 400px; ">New Article....!</h1>
+<div class="container">
+  <div class="commenter">
+  <form action="./inarticle.php" method="POST" enctype="multipart/form-data" style="margin-left: 150px">
+  <input type="file" name="file"  style="background-color: white;margin-right:40px ">  </div>  
+  <input type="submit" name="submit" value="submit"></input>
+</form>  
+    </div>
+</div>
+
+
+</body>
+</html>
+

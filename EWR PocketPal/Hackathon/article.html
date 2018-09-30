@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<style>
+.btn-group button {
+    background-color: #B6D5EA;
+                   /* Green border */
+    color: #990033;
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 75%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    height: 200px;
+    margin-right: 100px;
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color:white;
+}
+</style>
+<script>
+
+    
+  
+</script>
+<body >
+<button>Edit</button>
+<h1>Articles</h1>
+
+<!--<div class="btn-group">
+  <button><h2>Article 1!!</h2><br>In this article we r introducing you....</button>
+</div>
+<div class="btn-group">
+  <button><h2>Article 2!</h2><br>In this article we r introducing you....</button>
+</div>
+<div class="btn-group">
+  <button><h2>Article 3!</h2><br>In this article we r introducing you....</button>
+</div>-->
+<div class="btn-group">
+  <button id="pid"method="POST" action="article.php" ></button>
+</div>
+<input type="button" value="Add new article" onClick="myArticle('pid');">
+</div>
+</body>
+</html>

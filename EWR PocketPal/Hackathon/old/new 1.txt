@@ -1,0 +1,40 @@
+<script>
+
+  /*$(document).ready(function(){
+      $("#signupbtn").click(function(event){
+          event.preventDefault();
+      });*/
+  
+        // AJAX Code To Submit Form.
+        /*var formData = $("#signupform").serialize();
+        $.ajax({
+        type: "POST",
+        url: "https://localhost/C:/xampp/htdocs/project/signup.php", //change to shubham's php script name
+        data: formData,
+        cache: false,
+        })
+        .done(function(result){
+          if(result == 'true'){
+            window.open("home.html");
+              alert("You signed up successfully!");
+          }
+          else{
+            alert("Failed! Please try again.");
+      {
+        alert(name + " "+state+" "+gender+" "+dob+" "+district+" "+password+" "+phoneno);
+        $.getJSON("signup.php","name="+name+"&gender="+gender+"&dob="+dob+"&state="+state+"&district="+district+"&password="+password+"&phoneno="+phoneno,function(data){
+            alert(data);
+      })
+      .fail(function(data,status,err){
+          console.log(data);
+          }
+          
+        //alert(result);
+        })
+        .fail(function(data) {
+                alert("Connection Failed! Please try again.");
+                //document.getElementById("signupform").reset();
+        });
+        
+      });*/
+      }

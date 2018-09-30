@@ -1,0 +1,156 @@
+<html>
+<head>
+  <title>
+    Login Page
+  </title>
+    <!-- Compiled and minified CSS -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <!-- <link rel="stylesheet" type="text/css" href="signup.css" media="all" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="demo.css" media="all" /> -->
+	<script type="text/javascript" src="js/adminupload.js"></script>
+<style>
+    div {
+      text-align: center;
+    }
+    b {
+      color: grey;
+      text-align: left;
+    }
+ 
+.space
+{
+  height: 10%;
+}
+.s {
+    width: auto;
+}
+.a {
+  background-color: #07C2B0;
+}
+.b {
+  background-color: #F0A64F;
+}
+.c {
+  background-color: white;
+}
+.button {
+  background-color: #07C2B0;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {opacity: 1}
+
+</style>
+
+</head>
+
+<body class="a">
+    <div class="b">
+      <div class="space">
+        <h1><strong>ADMIN PAGE</strong></h1>
+      </div>
+    </div>
+      <br> <br>
+        <div class="c">
+          <div class="container">
+            <div class="container">
+               <br>
+               <div class="Category">
+                <button class="button" href="#" id="PREVIEW">PREVIEW</button>
+                <button class="button" href="#" id="UPDATE">UPDATE</button>
+               </div>
+
+                <div class="UPDATEFILE"><p id="AddV">
+              
+                  <!-- <form action="http://172.16.19.155/hackathon/php/inarticle.php" method="POST" enctype="multipart/form-data" name="upload_form"> -->
+                  <form  method="POST" enctype="multipart/form-data" name="upload_form">
+
+                   <fieldset class="s">
+                     <legend><label><b><font size="4"><strong>UPDATE DATA</b></font></label></strong></legend>
+                     
+					 <div class='resp_code frms'>
+			<p align='center'<h5><font style='font: 1em/1.3em Tahoma,Geneva,sans-serif;'>
+				<div id="selection">
+					<p>State</p>
+					<select id="listBox" name="state" onchange='selct_district(this.value)'></select>
+					<p>District</p>
+					<select id='secondlist' name="district"></select>
+				</div>
+			</div>
+			         
+			<div id="dumdiv" align="center" style=" font-size: 10px;color: #dadada;">
+        <a id="dum" style="padding-right:0px; text-decoration:none;color: green;text-align:center;" href="http://www.hscripts.com"></a>
+      </div>
+			
+			
+                     <br><br><label><b><font size = "4"> Select Category</font></b></label><br>
+                     <select name="category" id="category"> 
+                     <option 1 name="op1" id="1" value="Farmer Welfare">Farmer Welfare</option 1>
+                     <option 2 name="op2" id="2" value="Economy">Economy</option 2>
+                     <option 3 name="op3" id="3" value="Infrastructure">Infrastructure</option 3>
+                     <option 4 name="op5" id="4" value="">Health and Social Services</option 4>
+                     <option 5 name="op6" id="5" value="Health and Social Services">Panchayati Schemes</option 5>
+                     <option 6 name="op7" id="6" value="">Education</option 6>
+                     <option 7 name="op8" id="7" value="Education">India and The World</option 7>
+                     <option 8 name="op9" id="8" value="Technology">Technology</option 8>
+                     </select>
+                     <br><br><label><b><font size = "4"> Date</font></b></label><br>
+                     <input type="date" name="date" id="myDateV" value="2014-02-09"><br><br>
+                     <label><b><font size = "4"> Heading</font></b></label>
+                     <input type="text" name="heading" id="heading"><br><br>
+                     <div id="upload-button"></div>
+                       <div id="upload-input">
+                         <input id="file" name="file" type="file">
+                       </div>
+                     <label><b><font size = "4"> Description</font></b></label><br><br>
+                     <textarea rows="4" name="description" cols="50"></textarea><br><br>
+                     <button class="button" id="uploadbtn" type="Submit" onclick="uploadFile()" >Upload</button>
+                   </fieldset>
+
+                   
+                     </form>
+                    <p id="AddMore">Want to Add More? or Preview the app? <a class="Cat" href="#" id="Category">Add More</a></p>
+                </div>
+
+            </div>  
+           </div>
+        </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/JavaScript" src="js/state.js"></script>
+  <script>
+
+  $(document).ready(function(){
+      $(".UPDATEFILE").hide();
+
+      $("#UPDATE").click(function(event){
+          event.preventDefault();
+          $(".UPDATEFILE").fadeToggle("slow");
+          $(".Category").toggle(1000);
+      });
+      $("#AddMore").click(function(event){
+          event.preventDefault();
+          $(".UPDATEFILE").fadeToggle("slow");
+          $(".Category").toggle(1000);
+      });
+     
+    
+  });
+</script>
+</body>
+</html>
